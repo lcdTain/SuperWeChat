@@ -4,140 +4,117 @@
     android:layout_height="match_parent"
     android:background="#eff2f6"
     android:orientation="vertical" >
-
-    <RelativeLayout
+    <include layout="@layout/item_common_title"/>
+    <LinearLayout
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/wp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户名"
+        android:textSize="20sp"
+        android:textColor="#000"/>
+    <EditText
+        android:id="@+id/username"
+        android:layout_marginLeft="25dp"
         android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1" >
-
-        <ImageView
+        android:layout_height="wrap_content"
+        android:hint="你的用户名"
+        android:background="#fff"
+        android:textSize="20sp"
+        android:textColor="#000"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/wp">
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:src="@drawable/em_welcom_logo" />
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_weight="1.5"
-        android:orientation="vertical" >
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="#fff" >
-
-            <ImageView
-                android:id="@+id/iv_username"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="10dip"
-                android:src="@drawable/em_icon_account" />
-
-            <EditText
-                android:id="@+id/username"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@id/iv_username"
-                android:background="@null"
-                android:hint="@string/user_name"
-                android:paddingLeft="10dip"
-                android:singleLine="true"
-                android:textSize="18sp" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:background="#fff" >
-
-            <ImageView
-                android:id="@+id/iv_password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="10dip"
-                android:src="@drawable/em_icon_pwd" />
-
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@id/iv_password"
-                android:background="@null"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                android:paddingLeft="10dip"
-                android:singleLine="true"
-                android:textSize="18sp" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:background="#fff" >
-
-            <ImageView
-                android:id="@+id/iv_password2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="10dip"
-                android:src="@drawable/em_icon_pwd" />
-
-            <EditText
-                android:id="@+id/confirm_password"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@id/iv_password2"
-                android:background="@null"
-                android:hint="@string/confirmpassword"
-                android:inputType="textPassword"
-                android:paddingLeft="10dip"
-                android:singleLine="true"
-                android:textSize="18sp" />
-        </RelativeLayout>
-
-        <LinearLayout
+            android:text="昵称"
+            android:textSize="20sp"
+            android:textColor="#000"/>
+        <EditText
+            android:id="@+id/nick"
+            android:layout_marginLeft="45dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal" >
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/em_button_login_bg"
-                android:onClick="register"
-                android:paddingBottom="7dp"
-                android:paddingTop="7dp"
-                android:text="@string/register"
-                android:textColor="@android:color/white"
-                android:textSize="20sp" />
-        </LinearLayout>
+            android:hint="你的昵称"
+            android:background="#fff"
+            android:textSize="20sp"
+            android:textColor="#000"/>
     </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/wp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="密码"
+            android:textSize="20sp"
+            android:textColor="#000"/>
+        <EditText
+            android:id="@+id/password"
+            android:layout_marginLeft="45dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="填写密码"
+            android:background="#fff"
+            android:textSize="20sp"
+            android:password="true"
+            android:textColor="#000"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/wp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认密码"
+            android:textSize="20sp"
+            android:textColor="#000"/>
+        <EditText
+            android:id="@+id/confirm_password"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="确认密码"
+            android:password="true"
+            android:background="#fff"
+            android:textSize="20sp"
+            android:textColor="#000"/>
+    </LinearLayout>
+    <Button
+        android:onClick="register"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#a2f279"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:text="注册"
+        android:textColor="#fff"
+        android:textSize="25dp"/>
+
+
 
 </LinearLayout>
