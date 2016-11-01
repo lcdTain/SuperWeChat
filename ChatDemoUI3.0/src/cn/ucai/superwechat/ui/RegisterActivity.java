@@ -29,10 +29,12 @@ import com.hyphenate.exceptions.HyphenateException;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cn.ucai.superwechat.I;
 import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.SuperWeChatHelper;
 import cn.ucai.superwechat.bean.Result;
 import cn.ucai.superwechat.net.NetDao;
+import cn.ucai.superwechat.utils.CommonUtils;
 import cn.ucai.superwechat.utils.MFGT;
 import cn.ucai.superwechat.utils.OkHttpUtils;
 
@@ -117,10 +119,19 @@ public class RegisterActivity extends BaseActivity {
         NetDao.register(mContext, username, nick, pwd, new OkHttpUtils.OnCompleteListener<Result>() {
             @Override
             public void onSuccess(Result result) {
-                if (result != null && result.isRetMsg()) {
-                    registerEMAppServer();
-                } else {
-                    unregisterAppServer();
+                if (result ==null){
+                    pd.dismiss();
+                }else{
+                    if (result.isRetMsg()) {
+                        registerEMAppServer();
+                    } else {
+                        if (result.getRetCode() == I.MSG_GROUP_HXID_EXISTS){
+                            CommonUtils.showMsgShortToast(result.getRetCode());
+                            pd.dismiss();
+                        }else{
+                            unregisterAppServer();
+                        }
+                    }
                 }
             }
 
