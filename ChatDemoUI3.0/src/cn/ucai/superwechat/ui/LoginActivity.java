@@ -30,6 +30,7 @@ import android.widget.Toast;
 
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
+import com.hyphenate.easeui.domain.User;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
 
 import butterknife.Bind;
@@ -39,12 +40,10 @@ import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.SuperWeChatApplication;
 import cn.ucai.superwechat.SuperWeChatHelper;
 import cn.ucai.superwechat.bean.Result;
-import cn.ucai.superwechat.bean.User;
 import cn.ucai.superwechat.db.SuperWeChatManager;
 import cn.ucai.superwechat.db.UserDao;
 import cn.ucai.superwechat.net.NetDao;
 import cn.ucai.superwechat.utils.L;
-import cn.ucai.superwechat.utils.MD5;
 import cn.ucai.superwechat.utils.MFGT;
 import cn.ucai.superwechat.utils.OkHttpUtils;
 import cn.ucai.superwechat.utils.ResultUtils;
