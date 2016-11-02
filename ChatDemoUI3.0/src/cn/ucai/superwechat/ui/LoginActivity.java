@@ -44,6 +44,7 @@ import cn.ucai.superwechat.db.SuperWeChatManager;
 import cn.ucai.superwechat.db.UserDao;
 import cn.ucai.superwechat.net.NetDao;
 import cn.ucai.superwechat.utils.L;
+import cn.ucai.superwechat.utils.MD5;
 import cn.ucai.superwechat.utils.MFGT;
 import cn.ucai.superwechat.utils.OkHttpUtils;
 import cn.ucai.superwechat.utils.ResultUtils;
@@ -69,7 +70,7 @@ public class LoginActivity extends BaseActivity {
 
     String currentUsername;
     String currentPassword;
-    ProgressDialog pd;
+    ProgressDialog pd = null;
 
     LoginActivity mContext;
 
@@ -220,8 +221,9 @@ public class LoginActivity extends BaseActivity {
                         pd.dismiss();
                         L.e(TAG,"login fail,"+result);
                     }
+                }else{
+                    pd.dismiss();
                 }
-                loginSuccess();
             }
 
             @Override
