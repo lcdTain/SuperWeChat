@@ -12,6 +12,17 @@
             android:layout_width="40dp"
             android:layout_height="60dp"
             android:src="@drawable/em_mm_title_back"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tvWeixin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="25sp"
+            android:text="微信"
+            android:gravity="center_vertical"
+            android:textColor="#fff"
+            android:visibility="gone"
             android:layout_marginLeft="10dp" />
         <TextView
             android:id="@+id/tv_title"
