@@ -93,9 +93,9 @@ public class LoginActivity extends BaseActivity {
     }
 
     private void init() {
-        if (SuperWeChatHelper.getInstance().getCurrentUsernName() != null) {
+  /*      if (SuperWeChatHelper.getInstance().getCurrentUsernName() != null) {
             etUsername.setText(SuperWeChatHelper.getInstance().getCurrentUsernName());
-        }
+        }*/
         ivBack.setVisibility(View.VISIBLE);
         tvTitle.setVisibility(View.VISIBLE);
         tvTitle.setText(R.string.login);
@@ -270,6 +270,9 @@ public class LoginActivity extends BaseActivity {
         super.onResume();
         if (autoLogin) {
             return;
+        }
+        if (SuperWeChatHelper.getInstance().getCurrentUsernName() != null) {
+            etUsername.setText(SuperWeChatHelper.getInstance().getCurrentUsernName());
         }
     }
 
