@@ -10,12 +10,13 @@
     <include
         android:id="@+id/layout_title"
         layout="@layout/item_common_title"/>
-    <android.support.v4.view.ViewPager
+    <cn.ucai.superwechat.widget.MFViewPager
         android:id="@+id/layout_viewpage"
         android:layout_below="@id/layout_title"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </android.support.v4.view.ViewPager>
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp">
+    </cn.ucai.superwechat.widget.MFViewPager>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,9 +26,11 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#D6DCDC"/>
-        <TabHost
+        <cn.ucai.superwechat.widget.DMTabHost
+            android:id="@+id/layout_tabhost"
             android:layout_width="match_parent"
-            android:layout_height="47dp">
+            android:layout_height="47dp"
+            android:layout_marginBottom="1dp">
             <cn.ucai.superwechat.widget.DMTabButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -56,7 +59,7 @@
                 app:drawableTop="@drawable/tab_profile"
                 app:tabtext="@string/me">
             </cn.ucai.superwechat.widget.DMTabButton>
-        </TabHost>
+        </cn.ucai.superwechat.widget.DMTabHost>
     </LinearLayout>
 
 </RelativeLayout>
