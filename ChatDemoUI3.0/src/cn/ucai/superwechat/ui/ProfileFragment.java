@@ -17,6 +17,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.ucai.superwechat.R;
+import cn.ucai.superwechat.utils.MFGT;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -54,7 +55,8 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        if (savedInstanceState != null && savedInstanceState.getBoolean("isConflict",false));
+        if (savedInstanceState != null && savedInstanceState.getBoolean("isConflict",false))
+        return;
         setUserInfo();
     }
 
@@ -74,6 +76,7 @@ public class ProfileFragment extends Fragment {
                 RedPacketUtil.startChangeActivity(getActivity());
                 break;
             case R.id.tv_profile_settings:
+                MFGT.gotoSettings(getActivity());
                 break;
         }
     }
