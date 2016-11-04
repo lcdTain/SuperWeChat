@@ -452,9 +452,9 @@ public class SuperWeChatManager {
         if (db.isOpen()) {
             Cursor cursor = db.rawQuery("select * from " + UserDao.TABLE_USER_NAME /* + " desc" */, null);
             while (cursor.moveToNext()) {
-                String username = cursor.getString(cursor.getColumnIndex(UserDao.TABLE_USER_NAME));
+                String username = cursor.getString(cursor.getColumnIndex(UserDao.TABLE_COLUMN_NAME));
                 User user = new User(username);
-                user.setMUserNick(cursor.getString(cursor.getColumnIndex(UserDao.COLUMN_NAME_NICK)));
+                user.setMUserNick(cursor.getString(cursor.getColumnIndex(UserDao.TABLE_COLUMN_NICK)));
                 user.setMAvatarId(cursor.getInt(cursor.getColumnIndex(UserDao.TABLE_COLUMN_AVATAR_ID)));
                 user.setMAvatarPath(cursor.getString(cursor.getColumnIndex(UserDao.TABLE_COLUMN_AVATAR_PATH)));
                 user.setMAvatarType(cursor.getInt(cursor.getColumnIndex(UserDao.TABLE_COLUMN_AVATAR_TYPE)));
