@@ -16,6 +16,7 @@ import com.hyphenate.easeui.utils.EaseUserUtils;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cn.ucai.superwechat.Constant;
 import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.utils.MFGT;
 
@@ -80,5 +81,21 @@ public class ProfileFragment extends Fragment {
                 MFGT.gotoSettings(getActivity());
                 break;
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if (((MainActivity)getActivity()).isConflict){
+            outState.putBoolean("isConflict",true);
+        }else if(((MainActivity)getActivity()).getCurrentAccountRemoved()){
+            outState.putBoolean(Constant.ACCOUNT_REMOVED,true);
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        setUserInfo();
     }
 }
