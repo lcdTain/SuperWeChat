@@ -3,6 +3,7 @@ package com.hyphenate.easeui.utils;
 import android.app.Fragment;
 import android.content.Context;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -41,6 +42,14 @@ public class EaseUserUtils {
         return null;
     }
     
+    public static User getCurrentAppUserInfo(){
+        String username =  EMClient.getInstance().getCurrentUser();
+        if(userProvider != null)
+            return userProvider.getAppUser(username);
+
+        return null;
+    }
+
     /**
      * set user avatar
      * @param username
@@ -98,6 +107,7 @@ public class EaseUserUtils {
     public static void setAppUserNick(String username,TextView textView){
         if(textView != null){
             User user = getAppUserInfo(username);
+            Log.e("nick", user.toString());
             if(user != null && user.getMUserNick() != null){
                 textView.setText(user.getMUserNick());
             }else{
@@ -119,7 +129,10 @@ public class EaseUserUtils {
 
     public static void setCurrentAppUserNameWithNo(TextView textView) {
         String username = EMClient.getInstance().getCurrentUser();
-        setAppUserName("微信号：",username,textView);
+        setAppUserName("",username,textView);
+    }
+    public static void setAppUserNameWithNo(String username ,TextView textView) {
+        setAppUserName("",username,textView);
     }
 
     private static void setAppUserName(String suffix,String username, TextView textView) {

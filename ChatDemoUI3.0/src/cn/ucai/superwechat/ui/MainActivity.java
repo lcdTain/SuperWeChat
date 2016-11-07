@@ -241,7 +241,7 @@ public class MainActivity extends BaseActivity implements DMTabHost.OnCheckedCha
                 case 0:
                     break;
                 case 1:
-                    MFGT.gotoAddFrient(MainActivity.this);
+                    MFGT.gotoAddFriend(MainActivity.this);
                     break;
                 case 2:
                     break;
