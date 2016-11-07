@@ -2,6 +2,7 @@ package cn.ucai.superwechat.ui;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,6 +14,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.ucai.superwechat.I;
 import cn.ucai.superwechat.R;
+import cn.ucai.superwechat.SuperWeChatHelper;
 import cn.ucai.superwechat.utils.MFGT;
 
 public class FriendProfileActivity extends BaseActivity {
@@ -28,6 +30,12 @@ public class FriendProfileActivity extends BaseActivity {
     TextView tvNickname;
     @Bind(R.id.tv_userName)
     TextView tvUsername;
+    @Bind(R.id.btn_AddContact)
+    Button btnAddContact;
+    @Bind(R.id.btn_Message)
+    Button btnMessage;
+    @Bind(R.id.btn_Video_Message)
+    Button btnVideoMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,11 +61,35 @@ public class FriendProfileActivity extends BaseActivity {
         EaseUserUtils.setAppUserAvatar(this, user.getMUserName(), ivAvatar);
         EaseUserUtils.setAppUserNick(user.getMUserName(), tvNickname);
         EaseUserUtils.setAppUserNameWithNo(user.getMUserName(), tvUsername);
+        EaseUserUtils.setAppUserAvatar(this,user.getMUserName(),ivAvatar);
+        EaseUserUtils.setAppUserNick(user.getMUserNick(),tvNickname);
+        EaseUserUtils.setAppUserNameWithNo(user.getMUserName(),tvUsername);
     }
 
     @OnClick(R.id.ivBack)
     public void onClick() {
         MFGT.finish(this);
     }
+    public void isFriend() {
+        if (SuperWeChatHelper.getInstance().getAppContactList().containsKey(user.getMUserName())) {
+            btnMessage.setVisibility(View.VISIBLE);
+            btnVideoMessage.setVisibility(View.VISIBLE);
+        } else {
+            btnAddContact.setVisibility(View.VISIBLE);
+        }
 
+    }
+
+        @OnClick({R.id.btn_AddContact, R.id.btn_Message, R.id.btn_Video_Message})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_AddContact:
+                MFGT.gotoAddFriendMsg(this,user.getMUserName());
+                break;
+            case R.id.btn_Message:
+                break;
+            case R.id.btn_Video_Message:
+                break;
+        }
+    }
 }

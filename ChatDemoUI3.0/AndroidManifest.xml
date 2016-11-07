@@ -476,7 +476,10 @@
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="3ecea51f560650b1ed8a4b99808f52e8" />
 
-        <activity android:name=".ui.FriendProfileActivity"
+        <activity
+            android:name=".ui.FriendProfileActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".ui.AddFriendActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
     </application>
 
