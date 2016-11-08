@@ -71,7 +71,6 @@ public class FriendProfileActivity extends BaseActivity {
         } else {
             btnAddContact.setVisibility(View.VISIBLE);
         }
-
     }
 
         @OnClick({R.id.ivBack,R.id.btn_AddContact, R.id.btn_Message, R.id.btn_Video_Message})
