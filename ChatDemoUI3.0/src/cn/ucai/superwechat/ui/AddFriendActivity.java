@@ -49,6 +49,7 @@ public class AddFriendActivity extends BaseActivity {
         ivBack.setVisibility(View.VISIBLE);
         tvTitle.setVisibility(View.VISIBLE);
         tvSave.setVisibility(View.VISIBLE);
+        tvSave.setText(getString(R.string.button_send));
         tvTitle.setText(getString(R.string.add_friend));
         msg = getString(R.string.addcontact_send_msg_prefix)
                 + EaseUserUtils.getCurrentAppUserInfo().getMUserNick();

@@ -19,7 +19,7 @@ import cn.ucai.superwechat.utils.MFGT;
 
 public class FriendProfileActivity extends BaseActivity {
 
-    User user = null;
+    User user;
     @Bind(R.id.ivBack)
     ImageView ivBack;
     @Bind(R.id.tv_title)
@@ -54,6 +54,7 @@ public class FriendProfileActivity extends BaseActivity {
         tvTitle.setVisibility(View.VISIBLE);
         tvTitle.setText(getString(R.string.userinfo_txt_profile));
         setUserInfo();
+        isFriend();
 
     }
 
@@ -61,15 +62,8 @@ public class FriendProfileActivity extends BaseActivity {
         EaseUserUtils.setAppUserAvatar(this, user.getMUserName(), ivAvatar);
         EaseUserUtils.setAppUserNick(user.getMUserName(), tvNickname);
         EaseUserUtils.setAppUserNameWithNo(user.getMUserName(), tvUsername);
-        EaseUserUtils.setAppUserAvatar(this,user.getMUserName(),ivAvatar);
-        EaseUserUtils.setAppUserNick(user.getMUserNick(),tvNickname);
-        EaseUserUtils.setAppUserNameWithNo(user.getMUserName(),tvUsername);
     }
 
-    @OnClick(R.id.ivBack)
-    public void onClick() {
-        MFGT.finish(this);
-    }
     public void isFriend() {
         if (SuperWeChatHelper.getInstance().getAppContactList().containsKey(user.getMUserName())) {
             btnMessage.setVisibility(View.VISIBLE);
@@ -80,9 +74,12 @@ public class FriendProfileActivity extends BaseActivity {
 
     }
 
-        @OnClick({R.id.btn_AddContact, R.id.btn_Message, R.id.btn_Video_Message})
+        @OnClick({R.id.ivBack,R.id.btn_AddContact, R.id.btn_Message, R.id.btn_Video_Message})
     public void onClick(View view) {
         switch (view.getId()) {
+            case R.id.ivBack:
+                MFGT.finish(this);
+                break;
             case R.id.btn_AddContact:
                 MFGT.gotoAddFriendMsg(this,user.getMUserName());
                 break;

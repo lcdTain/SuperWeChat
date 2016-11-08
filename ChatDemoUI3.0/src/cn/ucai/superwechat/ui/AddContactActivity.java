@@ -92,6 +92,7 @@ public class AddContactActivity extends BaseActivity {
         NetDao.searchUser(this,toAddUsername, new OkHttpUtils.OnCompleteListener<String>() {
             @Override
             public void onSuccess(String s) {
+                progressDialog.dismiss();
                 if (s != null){
                     Result result = ResultUtils.getResultFromJson(s, User.class);
                     L.e(TAG,"searchAppUser,result="+result);
