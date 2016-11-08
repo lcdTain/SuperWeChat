@@ -9,7 +9,6 @@ import com.hyphenate.easeui.ui.EaseChatFragment;
 import com.hyphenate.util.EasyUtils;
 
 /**
- * chat activity，EaseChatFragment was used {@link #EaseChatFragment}
  *
  */
 public class ChatActivity extends BaseActivity{

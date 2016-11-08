@@ -1,5 +1,6 @@
 package cn.ucai.superwechat.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,7 @@ import butterknife.OnClick;
 import cn.ucai.superwechat.I;
 import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.SuperWeChatHelper;
+import cn.ucai.superwechat.utils.L;
 import cn.ucai.superwechat.utils.MFGT;
 
 public class FriendProfileActivity extends BaseActivity {
@@ -43,8 +45,10 @@ public class FriendProfileActivity extends BaseActivity {
         setContentView(R.layout.activity_frient_profile);
         ButterKnife.bind(this);
         user = (User) getIntent().getSerializableExtra(I.User.USER_NAME);
+        L.e("user: " + user);
         if (user == null) {
             MFGT.finish(this);
+            return;
         }
         initView();
     }
@@ -83,6 +87,7 @@ public class FriendProfileActivity extends BaseActivity {
                 MFGT.gotoAddFriendMsg(this,user.getMUserName());
                 break;
             case R.id.btn_Message:
+                MFGT.gotoChat(this,user.getMUserName());
                 break;
             case R.id.btn_Video_Message:
                 break;
