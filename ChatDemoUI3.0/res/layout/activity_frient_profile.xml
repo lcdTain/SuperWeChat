@@ -109,7 +109,7 @@
     <Button
         android:id="@+id/btn_AddContact"
         android:layout_width="370dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:background="#17ea10"
         android:layout_gravity="center_horizontal"
         android:text="添加到通讯录"
@@ -121,7 +121,7 @@
     <Button
         android:id="@+id/btn_Message"
         android:layout_width="370dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:background="#17ea10"
         android:layout_gravity="center_horizontal"
         android:text="发消息"
@@ -133,7 +133,7 @@
     <Button
         android:id="@+id/btn_Video_Message"
         android:layout_width="370dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:background="@color/white"
         android:layout_gravity="center_horizontal"
         android:text="视频聊天"
