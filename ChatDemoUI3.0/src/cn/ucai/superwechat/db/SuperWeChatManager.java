@@ -475,7 +475,8 @@ public class SuperWeChatManager {
     synchronized public void saveAppContact(User user) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(UserDao.TABLE_USER_NAME,user.getMUserName());
+        values.put(UserDao.TABLE_COLUMN_NAME,user.getMUserName());
+
         if(user.getMUserNick() != null)
             values.put(UserDao.TABLE_COLUMN_NICK, user.getMUserNick());
         if(user.getMAvatarId() != null)
@@ -488,6 +489,7 @@ public class SuperWeChatManager {
             values.put(UserDao.TABLE_COLUMN_AVATAR_SUFFIX,user.getMAvatarSuffix());
         if (user.getMAvatarLastUpdateTime() != null)
             values.put(UserDao.TABLE_COLUMN_AVATAR_LASTUPDATE_TIME,user.getMAvatarLastUpdateTime());
+
         if (db.isOpen()){
             db.replace(UserDao.TABLE_USER_NAME,null,values);
         }
