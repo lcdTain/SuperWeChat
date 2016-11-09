@@ -628,7 +628,7 @@ public class SuperWeChatHelper {
             localUsers.putAll(toAddUsers);
 
             Map<String,User> localAppUsers = getAppContactList();
-            if (!localAppUsers.containsKey(username)){
+            if (true){
                 NetDao.addContact(appContext,getInstance().getCurrentUsernName(), username, new OkHttpUtils.OnCompleteListener<String>() {
                     @Override
                     public void onSuccess(String s) {
