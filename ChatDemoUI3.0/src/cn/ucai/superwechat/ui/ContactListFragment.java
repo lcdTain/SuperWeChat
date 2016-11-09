@@ -357,5 +357,6 @@ public class ContactListFragment extends EaseContactListFragment {
         }
         
     }
+    void seHeadLayout(boolean isShow){}
 	
 }
