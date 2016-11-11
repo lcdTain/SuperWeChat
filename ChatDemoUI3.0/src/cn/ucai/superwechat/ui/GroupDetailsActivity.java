@@ -90,6 +90,12 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
 		setContentView(R.layout.em_activity_group_details);
 		instance = this;
 		st = getResources().getString(R.string.people);
+
+
+		RelativeLayout mRlGroupName = (RelativeLayout) findViewById(R.id.rl_group_name);
+		mRlGroupName.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+
+
 		RelativeLayout clearAllHistory = (RelativeLayout) findViewById(R.id.clear_all_history);
 		EaseExpandGridView userGridview = (EaseExpandGridView) findViewById(R.id.gridview);
 		loadingPB = (ProgressBar) findViewById(R.id.progressBar);
@@ -306,8 +312,7 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
 
 	/**
 	 * 退出群组
-	 * 
-	 * @param groupId
+	 *
 	 */
 	private void exitGrop() {
 		String st1 = getResources().getString(R.string.Exit_the_group_chat_failure);
@@ -338,8 +343,7 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
 
 	/**
 	 * 解散群组
-	 * 
-	 * @param groupId
+	 *
 	 */
 	private void deleteGrop() {
 		final String st5 = getResources().getString(R.string.Dissolve_group_chat_tofail);

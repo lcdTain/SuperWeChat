@@ -26,6 +26,8 @@ public class PublicGroupsSeachActivity extends BaseActivity{
     protected void onCreate(Bundle arg0) {
         super.onCreate(arg0);
         setContentView(R.layout.em_activity_public_groups_search);
+        RelativeLayout mRlTitle = (RelativeLayout) findViewById(R.id.title);
+        mRlTitle.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         
         containerLayout = (RelativeLayout) findViewById(R.id.rl_searched_group);
         idET = (EditText) findViewById(R.id.et_search_id);
