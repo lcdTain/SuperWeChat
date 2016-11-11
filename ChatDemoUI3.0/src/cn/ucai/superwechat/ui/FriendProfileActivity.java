@@ -18,12 +18,17 @@ import butterknife.OnClick;
 import cn.ucai.superwechat.I;
 import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.SuperWeChatHelper;
+import cn.ucai.superwechat.bean.Result;
+import cn.ucai.superwechat.net.NetDao;
 import cn.ucai.superwechat.utils.L;
 import cn.ucai.superwechat.utils.MFGT;
+import cn.ucai.superwechat.utils.OkHttpUtils;
+import cn.ucai.superwechat.utils.ResultUtils;
 
 public class FriendProfileActivity extends BaseActivity {
 
-    User user;
+    String username = null;
+    User user = null;
     @Bind(R.id.ivBack)
     ImageView ivBack;
     @Bind(R.id.tv_title)
@@ -40,28 +45,73 @@ public class FriendProfileActivity extends BaseActivity {
     Button btnMessage;
     @Bind(R.id.btn_Video_Message)
     Button btnVideoMessage;
+    boolean isFriend;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_frient_profile);
         ButterKnife.bind(this);
-        user = (User) getIntent().getSerializableExtra(I.User.USER_NAME);
-        L.e("user: " + user);
-        if (user == null) {
+        username = getIntent().getStringExtra(I.User.USER_NAME);
+        L.e("user: " + username);
+        if (username == null) {
             MFGT.finish(this);
             return;
         }
         initView();
+        user = SuperWeChatHelper.getInstance().getAppContactList().get(username);
+
+        if (user == null){
+            isFriend = false;
+        }else{
+            L.e(".....................user="+user);
+//            setUserInfo();
+            isFriend = true;
+
+        }
+        isFriend(isFriend);
+        syncUserInfo();
+    }
+
+    private void syncFail(){
+        MFGT.finish(this);
+        return;
+    }
+    private void syncUserInfo() {
+        NetDao.syncUserInfo(this, username, new OkHttpUtils.OnCompleteListener<String>() {
+            @Override
+            public void onSuccess(String s) {
+                if (s != null){
+                    Result result = ResultUtils.getResultFromJson(s, User.class);
+                    if (result != null && result.isRetMsg()){
+                        user = (User) result.getRetData();
+                        if (user != null){
+                            setUserInfo();
+                            if (isFriend){
+                                SuperWeChatHelper.getInstance().saveAppContact(user);
+                            }
+                        }else{
+                            syncFail();
+                        }
+                    }else{
+                        syncFail();
+                    }
+                }else{
+                    syncFail();
+                }
+            }
+
+            @Override
+            public void onError(String error) {
+                syncFail();
+            }
+        });
     }
 
     private void initView() {
         ivBack.setVisibility(View.VISIBLE);
         tvTitle.setVisibility(View.VISIBLE);
         tvTitle.setText(getString(R.string.userinfo_txt_profile));
-        setUserInfo();
-        isFriend();
-
     }
 
     private void setUserInfo() {
@@ -70,8 +120,8 @@ public class FriendProfileActivity extends BaseActivity {
         EaseUserUtils.setAppUserNameWithNo(user.getMUserName(), tvUsername);
     }
 
-    public void isFriend() {
-        if (SuperWeChatHelper.getInstance().getAppContactList().containsKey(user.getMUserName())) {
+    public void isFriend(boolean isFriend) {
+        if (isFriend) {
             btnMessage.setVisibility(View.VISIBLE);
             btnVideoMessage.setVisibility(View.VISIBLE);
         } else {

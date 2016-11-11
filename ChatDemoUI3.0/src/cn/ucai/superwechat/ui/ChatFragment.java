@@ -36,6 +36,7 @@ import cn.ucai.superwechat.domain.RobotUser;
 import cn.ucai.superwechat.utils.MFGT;
 import cn.ucai.superwechat.widget.ChatRowVoiceCall;
 import com.hyphenate.easeui.EaseConstant;
+import com.hyphenate.easeui.domain.User;
 import com.hyphenate.easeui.ui.EaseChatFragment;
 import com.hyphenate.easeui.ui.EaseChatFragment.EaseChatFragmentHelper;
 import com.hyphenate.easeui.widget.chatrow.EaseChatRow;
@@ -261,7 +262,11 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
 //        Intent intent = new Intent(getActivity(), UserProfileActivity.class);
 //        intent.putExtra("username", username);
 //        startActivity(intent);
-        MFGT.gotoFriendProfile(getActivity(),SuperWeChatHelper.getInstance().getAppContactList().get(username));
+        if (username.equals(EMClient.getInstance().getCurrentUser())){
+            MFGT.gotoUserProfile(getActivity());
+        }else {
+            MFGT.gotoFriendProfile(getActivity(),username);
+        }
     }
     
     @Override
