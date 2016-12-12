@@ -171,4 +171,25 @@ public class EaseUserUtils {
     private static void setAppUserName(String suffix,String username, TextView textView) {
         textView.setText(suffix + username);
     }
+
+    public static String getLiveAvatar(String hxid){
+        String path = "http://101.251.196.90:8000/SuperWeChatServerV2.0/downloadAvatar?name_or_hxid="+hxid
+                +"&avatarType=chatroom_icon&m_avatar_suffix=.jpg&updateTime=";
+        return path;
+    }
+
+    public static void setLiveCover(Context context, String hxid, ImageView imageView) {
+        if (hxid != null){
+            String cover = getLiveAvatar(hxid);
+            try {
+                int avatarResId = Integer.parseInt(cover);
+                Glide.with(context).load(avatarResId).into(imageView);
+            } catch (Exception e) {
+                //use default avatar
+                Glide.with(context).load(cover).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.drawable.default_hd_avatar).into(imageView);
+            }
+        }else{
+            Glide.with(context).load(R.drawable.ease_default_avatar).into(imageView);
+        }
+    }
 }
