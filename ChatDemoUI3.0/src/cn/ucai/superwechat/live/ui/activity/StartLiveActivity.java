@@ -18,25 +18,23 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import com.easemob.livedemo.R;
-import com.easemob.livedemo.data.TestDataRepository;
-import com.easemob.livedemo.data.model.LiveRoom;
-import com.easemob.livedemo.data.model.LiveSettings;
-import com.easemob.livedemo.utils.Log2FileUtil;
+
 import com.hyphenate.EMValueCallBack;
 import com.hyphenate.chat.EMChatRoom;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.easeui.controller.EaseUI;
 import com.hyphenate.easeui.widget.EaseAlertDialog;
-import com.ucloud.common.util.DeviceUtils;
-import com.ucloud.live.UEasyStreaming;
-import com.ucloud.live.UStreamingProfile;
-import com.ucloud.live.widget.UAspectFrameLayout;
+
 import java.util.List;
 import java.util.Random;
+
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import cn.ucai.superwechat.R;
+import cn.ucai.superwechat.live.data.TestDataRepository;
+import cn.ucai.superwechat.live.data.model.LiveRoom;
+import cn.ucai.superwechat.live.data.model.LiveSettings;
+import cn.ucai.superwechat.live.utils.Log2FileUtil;
 
 public class StartLiveActivity extends LiveBaseActivity
     implements UEasyStreaming.UStreamingStateListener {

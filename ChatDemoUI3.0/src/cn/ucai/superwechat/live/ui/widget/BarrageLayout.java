@@ -11,14 +11,11 @@ import android.view.animation.LinearInterpolator;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import com.easemob.livedemo.R;
-import com.github.florent37.viewanimator.AnimationBuilder;
-import com.github.florent37.viewanimator.AnimationListener;
-import com.github.florent37.viewanimator.ViewAnimator;
+import android.widget.ViewAnimator;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cn.ucai.superwechat.R;
 
 /**
  * Created by wei on 2016/6/13.

@@ -18,10 +18,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Toast;
 
-import com.easemob.redpacketui.RedPacketConstant;
-import com.easemob.redpacketui.utils.RedPacketUtil;
-import com.easemob.redpacketui.widget.ChatRowRedPacket;
-import com.easemob.redpacketui.widget.ChatRowRedPacketAck;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMCmdMessageBody;
 import com.hyphenate.chat.EMGroup;

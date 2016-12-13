@@ -10,18 +10,20 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import com.easemob.livedemo.R;
-import com.easemob.livedemo.data.model.LiveRoom;
+
 import com.hyphenate.EMValueCallBack;
 import com.hyphenate.chat.EMChatRoom;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.easeui.controller.EaseUI;
-import com.ucloud.common.logger.L;
-import com.ucloud.player.widget.v2.UVideoView;
+
 import java.util.Random;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import cn.ucai.superwechat.R;
+import cn.ucai.superwechat.live.data.model.LiveRoom;
+import cn.ucai.superwechat.utils.L;
 
 public class LiveDetailsActivity extends LiveBaseActivity implements UVideoView.Callback {
 

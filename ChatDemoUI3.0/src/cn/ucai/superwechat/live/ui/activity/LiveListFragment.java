@@ -12,14 +12,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import com.bumptech.glide.Glide;
-import com.easemob.livedemo.R;
-import com.easemob.livedemo.data.TestDataRepository;
-import com.easemob.livedemo.data.model.LiveRoom;
-import com.easemob.livedemo.ui.GridMarginDecoration;
-import java.util.List;
+import cn.ucai.superwechat.R;
+import cn.ucai.superwechat.live.data.TestDataRepository;
+import cn.ucai.superwechat.live.data.model.LiveRoom;
+import cn.ucai.superwechat.live.ui.GridMarginDecoration;
 
 /**
  * A simple {@link Fragment} subclass.

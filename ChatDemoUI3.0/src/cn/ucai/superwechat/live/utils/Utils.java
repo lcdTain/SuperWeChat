@@ -4,7 +4,8 @@ import android.content.Context;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
-import com.easemob.livedemo.DemoApplication;
+import cn.ucai.superwechat.live.DemoApplication;
+
 
 /**
  * Created by wei on 2016/6/2.

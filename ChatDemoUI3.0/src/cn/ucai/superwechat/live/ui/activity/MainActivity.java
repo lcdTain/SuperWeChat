@@ -8,15 +8,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.easemob.livedemo.R;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import com.hyphenate.EMMessageListener;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMConversation;
 import com.hyphenate.chat.EMMessage;
+
 import java.util.List;
+
+import butterknife.ButterKnife;
+import cn.ucai.superwechat.R;
 
 public class MainActivity extends BaseActivity {
 

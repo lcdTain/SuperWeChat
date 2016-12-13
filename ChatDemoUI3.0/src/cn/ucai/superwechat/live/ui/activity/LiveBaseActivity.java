@@ -12,20 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+import android.widget.ViewAnimator;
+
 import com.bumptech.glide.Glide;
-import com.easemob.livedemo.DemoConstants;
-import com.easemob.livedemo.R;
-import com.easemob.livedemo.data.TestAvatarRepository;
-import com.easemob.livedemo.ui.widget.BarrageLayout;
-import com.easemob.livedemo.ui.widget.LiveLeftGiftView;
-import com.easemob.livedemo.ui.widget.PeriscopeLayout;
-import com.easemob.livedemo.ui.widget.RoomMessagesView;
-import com.easemob.livedemo.utils.Utils;
-import com.github.florent37.viewanimator.AnimationListener;
-import com.github.florent37.viewanimator.ViewAnimator;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.EMChatRoomChangeListener;
 import com.hyphenate.EMMessageListener;
@@ -37,10 +26,23 @@ import com.hyphenate.chat.EMMessage;
 import com.hyphenate.chat.EMTextMessageBody;
 import com.hyphenate.exceptions.HyphenateException;
 import com.hyphenate.util.EMLog;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import cn.ucai.superwechat.R;
+import cn.ucai.superwechat.live.DemoConstants;
+import cn.ucai.superwechat.live.data.TestAvatarRepository;
+import cn.ucai.superwechat.live.ui.widget.BarrageLayout;
+import cn.ucai.superwechat.live.ui.widget.LiveLeftGiftView;
+import cn.ucai.superwechat.live.ui.widget.PeriscopeLayout;
+import cn.ucai.superwechat.live.ui.widget.RoomMessagesView;
+import cn.ucai.superwechat.live.utils.Utils;
 
 /**
  * Created by wei on 2016/6/12.
@@ -48,13 +50,17 @@ import java.util.List;
 public abstract class LiveBaseActivity extends BaseActivity {
   protected static final String TAG = "LiveActivity";
 
-  @BindView(R.id.left_gift_view1) LiveLeftGiftView leftGiftView;
+  @BindView(R.id.left_gift_view1)
+  LiveLeftGiftView leftGiftView;
   @BindView(R.id.left_gift_view2) LiveLeftGiftView leftGiftView2;
-  @BindView(R.id.message_view) RoomMessagesView messageView;
-  @BindView(R.id.periscope_layout) PeriscopeLayout periscopeLayout;
+  @BindView(R.id.message_view)
+  RoomMessagesView messageView;
+  @BindView(R.id.periscope_layout)
+  PeriscopeLayout periscopeLayout;
   @BindView(R.id.bottom_bar) View bottomBar;
 
-  @BindView(R.id.barrage_layout) BarrageLayout barrageLayout;
+  @BindView(R.id.barrage_layout)
+  BarrageLayout barrageLayout;
   @BindView(R.id.horizontal_recycle_view) RecyclerView horizontalRecyclerView;
   @BindView(R.id.audience_num) TextView audienceNumView;
   @BindView(R.id.new_messages_warn) ImageView newMsgNotifyImage;

@@ -6,10 +6,10 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.Window;
 import android.widget.ImageView;
-import butterknife.BindView;
+
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import com.easemob.livedemo.R;
+import cn.ucai.superwechat.R;
 
 /**
  * Created by wei on 2016/7/27.

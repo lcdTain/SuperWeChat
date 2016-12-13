@@ -9,12 +9,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.easemob.livedemo.R;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.exceptions.HyphenateException;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cn.ucai.superwechat.R;
 
 public class RegisterActivity extends BaseActivity {
 

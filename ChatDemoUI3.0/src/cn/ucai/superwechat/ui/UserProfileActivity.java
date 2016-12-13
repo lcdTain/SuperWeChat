@@ -29,11 +29,10 @@ import com.hyphenate.easeui.utils.EaseUserUtils;
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.ucai.superwechat.I;
@@ -51,15 +50,15 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
     private static final String TAG = UserProfileActivity.class.getSimpleName();
     private static final int REQUESTCODE_PICK = 1;
     private static final int REQUESTCODE_CUTTING = 2;
-    @Bind(R.id.ivBack)
+    @BindView(R.id.ivBack)
     ImageView ivBack;
-    @Bind(R.id.tv_title)
+    @BindView(R.id.tv_title)
     TextView tvTitle;
-    @Bind(R.id.iv_profile_avatar)
+    @BindView(R.id.iv_profile_avatar)
     ImageView ivProfileAvatar;
-    @Bind(R.id.tv_profile_nickname)
+    @BindView(R.id.tv_profile_nickname)
     TextView tvProfileNickname;
-    @Bind(R.id.tv_profile_weixinhao)
+    @BindView(R.id.tv_profile_weixinhao)
     TextView tvProfileWeixinhao;
 
     private ProgressDialog dialog;

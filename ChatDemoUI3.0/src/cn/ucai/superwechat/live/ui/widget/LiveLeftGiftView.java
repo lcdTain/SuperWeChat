@@ -9,11 +9,11 @@ import android.widget.RemoteViews;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.easemob.livedemo.R;
 import com.hyphenate.easeui.widget.EaseImageView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cn.ucai.superwechat.R;
 
 /**
  * Created by wei on 2016/6/7.

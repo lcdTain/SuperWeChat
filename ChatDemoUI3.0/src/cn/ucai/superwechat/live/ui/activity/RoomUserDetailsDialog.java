@@ -14,11 +14,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
-import butterknife.BindView;
+
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
-import com.easemob.livedemo.R;
+import cn.ucai.superwechat.R;
 
 /**
  * Created by wei on 2016/7/25.

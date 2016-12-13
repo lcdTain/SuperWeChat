@@ -8,14 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import butterknife.Unbinder;
-import com.easemob.livedemo.R;
-import com.easemob.livedemo.data.model.LiveSettings;
+
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
+
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import cn.ucai.superwechat.R;
+import cn.ucai.superwechat.live.data.model.LiveSettings;
 
 public class MyProfileFragment extends Fragment {
     Unbinder unbinder;

@@ -36,9 +36,9 @@ import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.easemob.livedemo.R;
-
 import java.util.Random;
+
+import cn.ucai.superwechat.R;
 
 
 public class PeriscopeLayout extends RelativeLayout {

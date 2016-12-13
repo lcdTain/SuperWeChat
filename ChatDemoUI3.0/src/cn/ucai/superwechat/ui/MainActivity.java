@@ -36,8 +36,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.easemob.redpacketui.RedPacketConstant;
-import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.EMContactListener;
 import com.hyphenate.EMMessageListener;
@@ -53,7 +51,7 @@ import com.umeng.update.UmengUpdateAgent;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.ucai.superwechat.Constant;
@@ -87,13 +85,13 @@ public class MainActivity extends BaseActivity implements DMTabHost.OnCheckedCha
 	private int currentTabIndex;
 //	// user logged into another device
     public boolean isConflict = false;
-    @Bind(R.id.tvWeixin)
+    @BindView(R.id.tvWeixin)
     TextView tvWeixin;
-    @Bind(R.id.iv_add)
+    @BindView(R.id.iv_add)
     ImageView ivAdd;
-    @Bind(R.id.layout_viewpage)
+    @BindView(R.id.layout_viewpage)
     ViewPager layoutViewpage;
-    @Bind(R.id.layout_tabhost)
+    @BindView(R.id.layout_tabhost)
     DMTabHost layoutTabhost;
     // user account was removed
     private boolean isCurrentAccountRemoved = false;

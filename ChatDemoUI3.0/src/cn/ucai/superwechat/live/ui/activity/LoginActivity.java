@@ -15,9 +15,11 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import com.easemob.livedemo.R;
+
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
+
+import cn.ucai.superwechat.R;
 
 /**
  * A login screen that offers login via email/password.

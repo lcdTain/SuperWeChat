@@ -3,13 +3,13 @@ package cn.ucai.superwechat.live.utils;
 import android.os.Environment;
 import android.util.Log;
 
-import com.ucloud.common.logger.L;
-
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import cn.ucai.superwechat.utils.L;
 
 //Log2FileUtil log = Log2FileUtil.getInstance();
 //log.startLog();//开始保存log

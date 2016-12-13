@@ -10,10 +10,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.hyphenate.easeui.utils.EaseUserUtils;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.ucai.superwechat.Constant;
@@ -26,11 +25,11 @@ import cn.ucai.superwechat.utils.MFGT;
 public class ProfileFragment extends Fragment {
 
 
-    @Bind(R.id.iv_profile_avatar)
+    @BindView(R.id.iv_profile_avatar)
     ImageView ivProfileAvatar;
-    @Bind(R.id.tv_profile_nickname)
+    @BindView(R.id.tv_profile_nickname)
     TextView tvProfileNickname;
-    @Bind(R.id.tv_profile_username)
+    @BindView(R.id.tv_profile_username)
     TextView tvProfileUsername;
 
     public ProfileFragment() {

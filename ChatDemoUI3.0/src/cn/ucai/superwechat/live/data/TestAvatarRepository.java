@@ -2,11 +2,11 @@ package cn.ucai.superwechat.live.data;
 
 import android.content.Context;
 
-import com.easemob.livedemo.DemoApplication;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import cn.ucai.superwechat.live.DemoApplication;
 
 /**
  * Created by wei on 2016/7/4.
