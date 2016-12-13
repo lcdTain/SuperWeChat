@@ -38,7 +38,7 @@ import com.hyphenate.exceptions.HyphenateException;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.ucai.superwechat.Constant;
@@ -48,13 +48,13 @@ import cn.ucai.superwechat.utils.MFGT;
 
 public class GroupsActivity extends BaseActivity {
     public static final String TAG = "GroupsActivity";
-    @Bind(R.id.ivBack)
+    @BindView(R.id.ivBack)
     ImageView ivBack;
-    @Bind(R.id.tv_title)
+    @BindView(R.id.tv_title)
     TextView tvTitle;
-    @Bind(R.id.list)
+    @BindView(R.id.list)
     ListView list;
-    @Bind(R.id.swipe_layout)
+    @BindView(R.id.swipe_layout)
     SwipeRefreshLayout swipeLayout;
     protected List<EMGroup> grouplist;
     private GroupAdapter groupAdapter;

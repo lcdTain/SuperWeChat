@@ -33,7 +33,7 @@ import com.hyphenate.chat.EMClient;
 import com.hyphenate.easeui.domain.User;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.ucai.superwechat.R;
@@ -56,13 +56,13 @@ import cn.ucai.superwechat.utils.ResultUtils;
 public class LoginActivity extends BaseActivity {
     private static final String TAG = "LoginActivity";
     public static final int REQUEST_CODE_SETNICK = 1;
-    @Bind(R.id.ivBack)
+    @BindView(R.id.ivBack)
     ImageView ivBack;
-    @Bind(R.id.tv_title)
+    @BindView(R.id.tv_title)
     TextView tvTitle;
-    @Bind(R.id.username)
+    @BindView(R.id.username)
     EditText etUsername;
-    @Bind(R.id.password)
+    @BindView(R.id.password)
     EditText etPassword;
 
     private boolean progressShow;

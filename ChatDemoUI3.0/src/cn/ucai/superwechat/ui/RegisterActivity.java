@@ -26,7 +26,7 @@ import com.hyphenate.EMError;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.exceptions.HyphenateException;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.ucai.superwechat.I;
@@ -42,15 +42,15 @@ import cn.ucai.superwechat.utils.OkHttpUtils;
  * register screen
  */
 public class RegisterActivity extends BaseActivity {
-    @Bind(R.id.tv_title)
+    @BindView(R.id.tv_title)
     TextView tvTitle;
-    @Bind(R.id.username)
+    @BindView(R.id.username)
     EditText etUsername;
-    @Bind(R.id.nick)
+    @BindView(R.id.nick)
     EditText etNick;
-    @Bind(R.id.password)
+    @BindView(R.id.password)
     EditText etPassword;
-    @Bind(R.id.confirm_password)
+    @BindView(R.id.confirm_password)
     EditText etConfirmPassword;
 
     String username;
@@ -59,7 +59,7 @@ public class RegisterActivity extends BaseActivity {
 
     ProgressDialog pd;
     RegisterActivity mContext;
-    @Bind(R.id.ivBack)
+    @BindView(R.id.ivBack)
     ImageView ivBack;
 
     @Override

@@ -43,7 +43,7 @@ import com.hyphenate.exceptions.HyphenateException;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.ucai.superwechat.R;
@@ -378,11 +378,11 @@ public class PublicChatRoomsActivity extends BaseActivity {
     }
 
     static class PhotoViewHolder extends RecyclerView.ViewHolder {
-        @Bind(R.id.photo)
+        @BindView(R.id.photo)
         ImageView imageView;
-        @Bind(R.id.author)
+        @BindView(R.id.author)
         TextView anchor;
-        @Bind(R.id.audience_num)
+        @BindView(R.id.audience_num)
         TextView audienceNum;
 
         public PhotoViewHolder(View itemView) {

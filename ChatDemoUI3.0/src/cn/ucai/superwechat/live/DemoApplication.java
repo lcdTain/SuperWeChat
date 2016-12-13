@@ -3,6 +3,7 @@ package cn.ucai.superwechat.live;
 import android.app.Application;
 
 import com.hyphenate.easeui.controller.EaseUI;
+import com.ucloud.live.UEasyStreaming;
 
 /**
  * Created by wei on 2016/5/27.

@@ -5,6 +5,8 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 
+import com.ucloud.live.UEasyStreaming;
+
 import cn.ucai.superwechat.R;
 
 

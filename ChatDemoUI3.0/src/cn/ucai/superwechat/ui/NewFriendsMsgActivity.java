@@ -21,7 +21,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.ucai.superwechat.R;
@@ -36,11 +36,11 @@ import cn.ucai.superwechat.utils.MFGT;
  */
 public class NewFriendsMsgActivity extends BaseActivity {
 
-    @Bind(R.id.ivBack)
+    @BindView(R.id.ivBack)
     ImageView ivBack;
-    @Bind(R.id.tv_title)
+    @BindView(R.id.tv_title)
     TextView tvTitle;
-    @Bind(R.id.list)
+    @BindView(R.id.list)
     ListView listView;
 
     @Override

@@ -12,7 +12,7 @@ import com.hyphenate.chat.EMClient;
 import com.hyphenate.easeui.domain.User;
 import com.hyphenate.easeui.utils.EaseUserUtils;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.ucai.superwechat.I;
@@ -29,21 +29,21 @@ public class FriendProfileActivity extends BaseActivity {
 
     String username = null;
     User user = null;
-    @Bind(R.id.ivBack)
+    @BindView(R.id.ivBack)
     ImageView ivBack;
-    @Bind(R.id.tv_title)
+    @BindView(R.id.tv_title)
     TextView tvTitle;
-    @Bind(R.id.iv_Avatar)
+    @BindView(R.id.iv_Avatar)
     ImageView ivAvatar;
-    @Bind(R.id.tv_nickname)
+    @BindView(R.id.tv_nickname)
     TextView tvNickname;
-    @Bind(R.id.tv_userName)
+    @BindView(R.id.tv_userName)
     TextView tvUsername;
-    @Bind(R.id.btn_AddContact)
+    @BindView(R.id.btn_AddContact)
     Button btnAddContact;
-    @Bind(R.id.btn_Message)
+    @BindView(R.id.btn_Message)
     Button btnMessage;
-    @Bind(R.id.btn_Video_Message)
+    @BindView(R.id.btn_Video_Message)
     Button btnVideoMessage;
     boolean isFriend;
 

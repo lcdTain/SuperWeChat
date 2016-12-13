@@ -15,6 +15,7 @@ import com.hyphenate.EMValueCallBack;
 import com.hyphenate.chat.EMChatRoom;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.easeui.controller.EaseUI;
+import com.ucloud.player.widget.v2.UVideoView;
 
 import java.util.Random;
 

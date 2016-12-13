@@ -15,6 +15,7 @@ import com.hyphenate.chat.EMMessage;
 
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import cn.ucai.superwechat.R;
 

@@ -24,10 +24,15 @@ import com.hyphenate.chat.EMChatRoom;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.easeui.controller.EaseUI;
 import com.hyphenate.easeui.widget.EaseAlertDialog;
+import com.ucloud.common.util.DeviceUtils;
+import com.ucloud.live.UEasyStreaming;
+import com.ucloud.live.UStreamingProfile;
+import com.ucloud.live.widget.UAspectFrameLayout;
 
 import java.util.List;
 import java.util.Random;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.ucai.superwechat.R;
@@ -40,7 +45,8 @@ public class StartLiveActivity extends LiveBaseActivity
     implements UEasyStreaming.UStreamingStateListener {
   private static final String TAG = StartLiveActivity.class.getSimpleName();
   @BindView(R.id.toolbar) Toolbar toolbar;
-  @BindView(R.id.container) UAspectFrameLayout mPreviewContainer;
+  @BindView(R.id.container)
+  UAspectFrameLayout mPreviewContainer;
   @BindView(R.id.start_container) RelativeLayout startContainer;
   @BindView(R.id.countdown_txtv) TextView countdownView;
   @BindView(R.id.tv_username) TextView usernameView;

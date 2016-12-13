@@ -47,7 +47,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.ucai.superwechat.I;
@@ -66,25 +66,25 @@ public class NewGroupActivity extends BaseActivity {
     private static final int REQUESTCODE_PICK = 1;
     private static final int REQUESTCODE_CUTTING = 2;
     private static final int REQUESTCODE_PICK_MEMBER = 3;
-    @Bind(R.id.ivBack)
+    @BindView(R.id.ivBack)
     ImageView ivBack;
-    @Bind(R.id.tv_title)
+    @BindView(R.id.tv_title)
     TextView tvTitle;
-    @Bind(R.id.tv_add_friend)
+    @BindView(R.id.tv_add_friend)
     TextView tvAddFriend;
-    @Bind(R.id.edit_group_name)
+    @BindView(R.id.edit_group_name)
     EditText editGroupName;
-    @Bind(R.id.edit_group_introduction)
+    @BindView(R.id.edit_group_introduction)
     EditText editGroupIntroduction;
-    @Bind(R.id.iv_group_icon)
+    @BindView(R.id.iv_group_icon)
     ImageView ivGroupIcon;
-    @Bind(R.id.cb_public)
+    @BindView(R.id.cb_public)
     CheckBox cbPublic;
-    @Bind(R.id.second_desc)
+    @BindView(R.id.second_desc)
     TextView secondDesc;
-    @Bind(R.id.cb_member_inviter)
+    @BindView(R.id.cb_member_inviter)
     CheckBox cbMemberInviter;
-    @Bind(R.id.tv_save)
+    @BindView(R.id.tv_save)
     TextView tvSave;
     private ProgressDialog progressDialog;
 

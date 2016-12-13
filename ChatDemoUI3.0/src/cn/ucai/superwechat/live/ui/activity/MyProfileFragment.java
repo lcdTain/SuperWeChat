@@ -12,8 +12,10 @@ import android.widget.TextView;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.live.data.model.LiveSettings;
 

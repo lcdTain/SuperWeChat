@@ -11,7 +11,10 @@ import android.view.animation.LinearInterpolator;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.ViewAnimator;
+
+import com.github.florent37.viewanimator.AnimationBuilder;
+import com.github.florent37.viewanimator.AnimationListener;
+import com.github.florent37.viewanimator.ViewAnimator;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

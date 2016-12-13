@@ -17,7 +17,9 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.easemob.redpacketui.RedPacketConstant;
 import com.hyphenate.chat.EMMessage;
+
 import cn.ucai.superwechat.Constant;
 import cn.ucai.superwechat.R;
 
